@@ -1,0 +1,45 @@
+name: SMPWeapons
+version: 1.0.0
+main: com.smpweapons.WeaponsPlugin
+api-version: '1.21'
+description: Custom weapon SMP - 7 weapons plus the one and only Heavy Hitter mace.
+authors: [you]
+
+commands:
+  trust:
+    description: Trust a player so your abilities never hurt them (or "list" to see who you trust).
+    usage: /trust <player|list>
+  untrust:
+    description: Remove a player from your trust list.
+    usage: /untrust <player>
+  start:
+    description: Start the SMP (abilities go live, everyone gets a weapon).
+    usage: /start smp
+    permission: weapons.admin
+  end:
+    description: End the SMP (abilities switch off).
+    usage: /end smp
+    permission: weapons.admin
+  reroll:
+    description: Reroll a player's weapon to a different random one.
+    usage: /reroll [player]
+    permission: weapons.admin
+  upgrade:
+    description: Upgrade a player's weapon to Tier II.
+    usage: /upgrade [player]
+    permission: weapons.admin
+  weapon:
+    description: Admin weapon tools (give / remove / list / tier / info).
+    usage: /weapon <give|remove|list|tier|info> ...
+    aliases: [wepon, weapons]
+    permission: weapons.admin
+  heavyhitter:
+    description: Give or remove the Heavy Hitter mace.
+    usage: /heavyhitter <give|remove|where> [player]
+    aliases: [hh]
+    permission: weapons.admin
+
+permissions:
+  weapons.admin:
+    description: Use the admin commands.
+    default: op

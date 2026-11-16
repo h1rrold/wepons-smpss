@@ -1,0 +1,45 @@
+# ---------------------------------------------------------------------------
+#  SMPWeapons config
+# ---------------------------------------------------------------------------
+
+# false = nobody gets a weapon and no abilities work until an admin runs /start smp.
+# true  = the SMP is considered started the first time the plugin loads.
+auto-start: false
+
+# Do abilities hurt mobs as well as players?
+affect-mobs: true
+
+# Tier II shortens BOTH ability cooldowns by this multiplier (0.75 = 25% shorter).
+tier2-cooldown-multiplier: 0.75
+
+# Delete every mace that isn't the Heavy Hitter (vault loot, pick-ups, creative copies...).
+remove-other-maces: true
+
+# Dynasty Sword passive. You wrote "hero of the village x" - read as level X (10).
+hero-of-the-village-level: 10
+
+# Dragon's Fang mini dragon: rotate the 3D model if it ever flies backwards (try 180). Test with /weapon dragon.
+mini-dragon-yaw-offset: 0
+
+# Inferno Sword - Blaze Circle heal (hearts) after standing in the 3x3 for 3 seconds.
+blaze-heal-hearts: 5
+
+# Optional: send the resource pack to players on join. Host WeaponsPack.zip somewhere public
+# (GitHub release, Dropbox ?dl=1 link, your own web host) and paste the direct link here.
+# sha1 is optional but recommended (40 hex chars, `sha1sum WeaponsPack.zip`).
+resource-pack:
+  url: ""
+  sha1: ""
+  force: false
+
+# Ability cooldowns in seconds (Tier II multiplies these by tier2-cooldown-multiplier).
+# Dynasty ability 1 uses the coin recharge system instead, Ice Axe ability 2 is automatic.
+cooldowns:
+  beamer_sword:    { ability1: 30, ability2: 30 }
+  tropical_bow_staff: { ability1: 30, ability2: 50 }
+  ice_axe:         { ability1: 50, ability2: 0 }
+  dynasty_sword:   { ability1: 0,  ability2: 40 }
+  inferno_sword:   { ability1: 30, ability2: 45 }
+  hellsfire_axe:   { ability1: 45, ability2: 35 }
+  dragons_fang:    { ability1: 30, ability2: 40 }
+  heavy_hitter:    { ability1: 50, ability2: 65 }
